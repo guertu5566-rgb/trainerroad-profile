@@ -255,6 +255,14 @@
 - 意味著手機 Claude 不用再 fetch GitHub URL 也能拿到活動資料
 - **本檔案（manual_context.md）仍是 Fit 診斷、疼痛、計畫等「Strava 沒有的資料」的來源**
 
+### Google Calendar 連動 TrainerRoad（2026-07-14 確認）✅
+- 使用者 TrainerRoad 已同步到 Google 日曆的 **「TAENG TrainerRoad Calendar」**
+- Calendar ID: `fb50fbnjnc78a2q5ttvgicaqk6qk0n0h@import.calendar.google.com`
+- **電腦端 Claude Code** 有 Google Calendar MCP，可直接讀取
+- **手機 Claude App** 若加 Google Calendar connector，也能即時讀取
+- TR 排定課表**不再需要爬 TR 網頁**、也不需要 iCal URL
+- 每次對話 Claude 可即時查詢，或定期 snapshot 到 `tr_planned.md`
+
 ## 🐛 已知系統問題
 
 - **TrainerRoad 資料抓取**：`trainerroad_fetch.py` 因 Playwright Chromium 未安裝失敗
@@ -281,6 +289,7 @@
 
 ### 日誌內容（新→舊）
 
+- 📱 [2026-07-14 21:39] 決定：本週 7/14-7/20 完全不騎車，跳過 Takazuma，專注恢復+Fit+飲食。原因：TSB -28.8、舊傷、只有今天能騎不划算。下週 Fit 完再全力練 Panoche/Sapitwa。
 - 📱 [2026-07-14 18:48] 測試同步：架構建立完成，Strava MCP 已連手機、電腦端擴充結構、加入雙向日誌
 - 💻 [2026-07-14 上午] 初次建立完整訓練 + Fit 診斷架構、更新至 manual_context.md
 - 💻 [2026-07-14 中午] 使用者確認 Strava MCP 於手機端連接完成
